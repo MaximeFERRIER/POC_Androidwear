@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".DetailBateauActivity"
+        android:orientation="vertical">
+
+    <ImageView
+            android:src="@mipmap/ic_launcher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/img_icone_bateau"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_nom_bateau"
+            android:paddingLeft="24dp"
+            android:textSize="16sp" android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="@color/blue" android:textStyle="bold"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_type_bateau"
+            android:paddingLeft="24dp"
+            android:textSize="16sp"/>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:id="@+id/layout_activation_journee" android:visibility="gone">
+        <TextView
+                android:text="@string/jours_restant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_jours_restants"
+                android:paddingLeft="24dp"
+                android:textSize="16sp"/>
+        <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/pb_gauge"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:max="20"
+                android:progress="12" android:paddingTop="16dp" android:paddingBottom="16dp"/>
+        <Button
+                android:text="@string/activation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_activer"
+                android:textAlignment="center"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:id="@+id/layout_all_activated">
+        <TextView
+                android:text="@string/tous_jours_actifs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/tv_full_activated" android:textSize="18sp"
+                android:textAlignment="center" android:textStyle="bold" android:paddingTop="16dp"
+                android:paddingLeft="16dp" android:paddingRight="16dp"/>
+    </LinearLayout>
+</LinearLayout>
